@@ -1,9 +1,6 @@
 package nl.novi.teacherproject.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "teachers")
@@ -12,7 +9,9 @@ public class Teacher {
     @Id
     @GeneratedValue
     private Long id;
+   @Column (name = "first_name")
     private String firstName;
+   @Column(name = "last_name")
     private String lastName;
 
 
