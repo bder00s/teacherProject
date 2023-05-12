@@ -1,44 +1,21 @@
 package nl.novi.teacherproject.model;
-
+import lombok.Setter;
+import lombok.Getter;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "teachers")
+@Getter
+@Setter
 
 public class Teacher {
     @Id
     @GeneratedValue
     private Long id;
-   @Column (name = "first_name")
+    @Column(name = "first_name")
     private String firstName;
-   @Column(name = "last_name")
+    @Column(name = "last_name")
     private String lastName;
 
 
-
-    /// GETTERS AND SETTERS
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

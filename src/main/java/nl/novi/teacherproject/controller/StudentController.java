@@ -24,7 +24,8 @@ public class StudentController {
 
     @GetMapping("/allstudents")
     public ResponseEntity<Iterable<Student>> getStudents() {
-        return ResponseEntity.ok(repostudent.findAll());
+        return
+                ResponseEntity.ok(repostudent.findAll());
     }
 
     @GetMapping("/findstudent")
