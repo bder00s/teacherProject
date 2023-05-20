@@ -8,4 +8,5 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
 
     ArrayList<Teacher> findByFirstNameAndLastName(String firstName, String lastName);
 
+
 }

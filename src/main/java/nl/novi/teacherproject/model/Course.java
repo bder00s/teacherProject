@@ -2,6 +2,8 @@ package nl.novi.teacherproject.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Course {
     @Id
@@ -14,6 +16,11 @@ public class Course {
     @ManyToOne
     private Teacher teacher;
 
+    @OneToMany(mappedBy = "course")
+    List<Lesson> lessonList;
+
+
+    ////////////////////////////////////////
     public Long getId() {
         return id;
     }
@@ -44,5 +51,13 @@ public class Course {
 
     public Teacher getTeacher(){
         return teacher;
+    }
+
+    public void setLessonList(List<Lesson> lessonList) {
+        this.lessonList = lessonList;
+    }
+
+    public List<Lesson> getLessonList() {
+        return lessonList;
     }
 }

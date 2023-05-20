@@ -1,5 +1,8 @@
 package nl.novi.teacherproject.DTO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CourseDto {
 
     public Long id;
@@ -8,6 +11,8 @@ public class CourseDto {
 
     // koppeling met teacher
     public Long teacherId;
+
+    public List<String> lessonTitles = new ArrayList<>();
 
 
 

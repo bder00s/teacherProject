@@ -32,7 +32,16 @@ public class TeacherController {
     }
 
 
+@GetMapping("/getTeacher/{id}")
+public ResponseEntity<TeacherDto> getTeacher(@PathVariable Long id){
+        return ResponseEntity.ok(teacherService.getTeacher(id));
+}
 
+//@GetMapping("/findByName/{name}")
+//public ResponseEntity<TeacherDto> findTeacher(@RequestBody TeacherDto teacherDto){
+//        return ResponseEntity.ok().body(teacherService.)
+//
+//}
 
 
     /// POST MAPPING ///////
