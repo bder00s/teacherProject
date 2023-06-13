@@ -17,4 +17,5 @@ public class TeacherDto {
 
     public List<String> courseTitles = new ArrayList<>();
 
+
 }

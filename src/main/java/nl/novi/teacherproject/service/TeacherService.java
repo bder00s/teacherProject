@@ -79,16 +79,20 @@ public class TeacherService {
         return teacherDto;
     }
 
+public Teacher findTeacher(@RequestParam String firstName){
+        Teacher teacher = teacherRepository.findByFirstName(firstName);
+        return teacher;
+}
 
 //    public TeacherDto findTeacher(@RequestParam )
 //    Teacher teacher = teacherRepository.findByFirstNameAndLastName(transferTeacherToDto()).orElseThrow(() -> new RecordNotFoundException("Teacher not found"));
-//
-////        //Lijst van teachers
-////            List<Teacher> listofteachers = teacherRepository.findAll();
-////        //Lijst van teacher dto's
-////            List <TeacherDto> teacherDtoList = new ArrayList<>();
-////            for (Teacher teacher : listofteachers) {
-////                teacherDtoList.add(transferTeacherToDto(teacher));
+
+//        //Lijst van teachers
+//            List<Teacher> listofteachers = teacherRepository.findAll();
+//        //Lijst van teacher dto's
+//            List <TeacherDto> teacherDtoList = new ArrayList<>();
+//            for (Teacher teacher : listofteachers) {
+//                teacherDtoList.add(transferTeacherToDto(teacher));
 
 
 //    .findByFirstNameAndLastName(transferTeacherToDto(teacher).firstName).orElseThrow(() -> new

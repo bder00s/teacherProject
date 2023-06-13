@@ -22,8 +22,15 @@ public class Teacher {
     @JsonIgnore //infinite foutmelding breken
     private List<Course> courses;
 
+    public Teacher(Long id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
+    public Teacher() {
 
+    }
 
     public Long getId() {
         return id;

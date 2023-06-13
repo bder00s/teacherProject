@@ -7,6 +7,6 @@ import java.util.ArrayList;
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
 
     ArrayList<Teacher> findByFirstNameAndLastName(String firstName, String lastName);
-
+ Teacher findByFirstName(String firstName);
 
 }
